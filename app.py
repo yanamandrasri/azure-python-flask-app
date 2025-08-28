@@ -7,4 +7,5 @@ def hello_world():
     return "Hello, Azure App Service with Python Flask!"
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    # Run the app in production mode (debug=False)
+    app.run(host='0.0.0.0', port=5000, debug=False)  # Set debug=False for production
